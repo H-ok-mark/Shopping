@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品浏览 - 零食商城</title>
+    <title>商品浏览</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>零食商城</h1>
+        <h1>商品浏览</h1>
         <nav>
             <a href="index.html" class="nav-link">商品浏览</a>
             <a href="cart.html" class="nav-link">购物车</a>
@@ -18,9 +18,7 @@
         </nav>
     </header>
 
-
     <!-- 商品分类导航栏 -->
-    <!--暂时未实现功能-->
     <div id="category-container" class="category-container">
         <button onclick="filterProducts('所有')">所有</button>
         <button onclick="filterProducts('游戏')">游戏</button>
@@ -29,14 +27,13 @@
         <button onclick="filterProducts('饮料')">饮料</button>
     </div>
 
-
-    <section id="product-container">
-
-        <!-- 商品列表展示 -->
+    <!-- 商品展示区域 -->
+    <section id="product-container" class="product-container">
+        <!-- 动态生成商品列表 -->
     </section>
 
     <footer>
-        <p>web前端开发大作业 © 2024 零食商城</p>
+        <p>© 2024 web前端开发大作业</p>
     </footer>
 
     <script src="./js/product.js"></script>

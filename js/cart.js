@@ -20,10 +20,20 @@ function updateCart() {
 }
 
 function removeFromCart(id) {
-    cart = cart.filter(item => item.id !== id);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCart();
+    const itemIndex = cart.findIndex(item => item.id === id);
+    if (itemIndex > -1) {
+        if (cart[itemIndex].quantity > 1) {
+            // 如果商品数量大于 1，只减少数量
+            cart[itemIndex].quantity--;
+        } else {
+            // 如果商品数量为 1，删除该商品
+            cart.splice(itemIndex, 1);
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCart();  // 更新购物车显示
+    }
 }
+
 
 function goToCheckout() {
     if (cart.length === 0) {
