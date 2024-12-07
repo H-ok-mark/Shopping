@@ -42,7 +42,7 @@ function goToCheckout() {
     }
     sessionStorage.setItem("order", JSON.stringify(cart));
     localStorage.removeItem("cart");
-    window.location.href = "order.html";
+    window.location.href = "../html/order.html";
 }
 
 window.onload = updateCart;

@@ -1,12 +1,12 @@
 // 商品数据（已更新）
 const products = [
-    { id: 1, name: "巧克力", price: 20, img: "./image/product1.png", category: "零食" },
-    { id: 2, name: "薯片", price: 15, img: "./image/product2.png", category: "零食" },
-    { id: 3, name: "饼干", price: 10, img: "./image/product3.png", category: "零食" },
-    { id: 4, name: "坚果", price: 30, img: "./image/product1.png", category: "零食" },
-    { id: 6, name: "PC游戏", price: 100, img: "./image/product3.png", category: "游戏" },
-    { id: 7, name: "汽水", price: 8, img: "./image/product1.png", category: "饮料" },
-    { id: 8, name: "果汁", price: 12, img: "./image/product2.png", category: "饮料" }
+    { id: 1, name: "巧克力", price: 20, img: "../image/product1.png", category: "零食" },
+    { id: 2, name: "薯片", price: 15, img: "../image/product2.png", category: "零食" },
+    { id: 3, name: "饼干", price: 10, img: "../image/product3.png", category: "零食" },
+    { id: 4, name: "坚果", price: 30, img: "../image/product1.png", category: "零食" },
+    { id: 6, name: "PC游戏", price: 100, img: "../image/product3.png", category: "游戏" },
+    { id: 7, name: "汽水", price: 8, img: "../image/product1.png", category: "饮料" },
+    { id: 8, name: "果汁", price: 12, img: "../image/product2.png", category: "饮料" }
 ];
 
 // 获取商品展示容器

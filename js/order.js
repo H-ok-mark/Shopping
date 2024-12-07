@@ -22,7 +22,7 @@ function renderOrder() {
 function submitOrder() {
     alert("订单已提交！");
     sessionStorage.removeItem("order");
-    window.location.href = "index.html";
+    window.location.href = "../html/index.html";
 }
 
 window.onload = renderOrder;
