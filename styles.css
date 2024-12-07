@@ -1,88 +1,117 @@
 /* 通用样式 */
 * {
     margin: 0;
+    /* 移除所有元素的默认外边距 */
     padding: 0;
+    /* 移除所有元素的默认内边距 */
     box-sizing: border-box;
+    /* 使元素的宽度和高度包括内边距和边框 */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 设置全局字体 */
 }
 
 body {
     background: #fafafa;
+    /* 设置背景颜色为浅灰色 */
     color: #444;
+    /* 设置文本颜色为深灰色 */
     font-size: 16px;
+    /* 设置字体大小为16像素 */
     line-height: 1.6;
+    /* 设置行高为1.6倍字体大小 */
+
+
 }
 
 /* 头部样式 */
 header {
     background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    /* 设置背景为135度线性渐变 */
     padding: 30px 0;
+    /* 设置上下内边距为30像素，左右为0 */
     text-align: center;
+    /* 设置文本居中对齐 */
     border-bottom: 5px solid #d1d1d1;
+    /* 设置底部边框为5像素实线，颜色为浅灰色 */
 }
 
 header h1 {
     color: white;
+    /* 设置标题颜色为白色 */
     font-size: 3em;
+    /* 设置字体大小为3倍默认大小 */
     font-weight: 700;
+    /* 设置字体粗细为700（加粗） */
     margin-bottom: 20px;
+    /* 设置底部外边距为20像素 */
 }
 
 nav a {
     margin: 0 20px;
+    /* 设置右外边距为20像素 */
     color: white;
+    /* 设置链接颜色为白色 */
     text-decoration: none;
+    /* 移除链接下划线 */
     font-weight: 600;
+    /* 设置字体粗细为600 */
     font-size: 1.1em;
+    /* 设置字体大小为1.1倍默认大小 */
 }
 
 nav a:hover {
     color: #f8f9fa;
+    /* 设置鼠标悬停时链接颜色为浅灰色 */
 }
 
-/* 商品列表展示容器样式
-   - display: flex; 使用 Flexbox 布局，使子元素可以灵活排列
-   - flex-wrap: wrap; 允许子元素在容器内换行
-   - justify-content: center; 将子元素在主轴（水平轴）上居中对齐
-   - padding: 40px 20px; 为容器添加内边距，上下各40px，左右各20px
-   - gap: 20px; 子元素之间的间距为20px */
+/* 商品列表展示容器样式 */
 #product-container {
     display: flex;
+    /* 使用 Flexbox 布局，使子元素可以灵活排列 */
     flex-wrap: wrap;
+    /* 允许子元素在容器内换行 */
     justify-content: center;
+    /* 将子元素在主轴（水平轴）上居中对齐 */
     height: fit-content;
+    /* 使容器高度适应内容 */
     padding: 40px 20px;
+    /* 为容器添加内边距，上下各40像素，左右各20像素 */
     gap: 20px;
+    /* 子元素之间的间距为20像素 */
 }
 
 /* 商品列表展示 */
-#product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px 20px;
-    gap: 20px;
-}
-
 .product {
     background-color: white;
+    /* 设置背景颜色为白色 */
     border-radius: 15px;
+    /* 设置边框圆角为15像素 */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* 设置阴影效果 */
     width: 250px;
+    /* 设置宽度为250像素 */
     padding: 20px;
+    /* 设置内边距为20像素 */
     text-align: center;
+    /* 设置文本居中对齐 */
     transition: all 0.3s ease-in-out;
+    /* 设置过渡效果 */
     overflow: hidden;
+    /* 隐藏溢出内容 */
 }
 
 .product:hover {
     transform: translateY(-5px);
+    /* 鼠标悬停时向上移动5像素 */
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    /* 鼠标悬停时增加阴影效果 */
 }
 
 .product img {
     width: 100%;
+    /* 设置图片宽度为100% */
     height: 200px;
+    /* 设置图片高度为200像素 */
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -90,8 +119,11 @@ nav a:hover {
 
 .product h3 {
     font-size: 1.6em;
+    /* 设置标题字体大小为1.6倍默认大小 */
     color: #333;
-    margin-bottom: 10px;
+    /* 设置标题颜色为深灰色 */
+    margin-bottom: 15px;
+    /* 设置底部外边距为15像素 */
 }
 
 .product p {
@@ -102,184 +134,284 @@ nav a:hover {
 
 button {
     background-color: #6a82fb;
+    /* 设置按钮背景颜色 */
     color: white;
+    /* 设置按钮文字颜色 */
     border: none;
+    /* 移除按钮边框 */
     padding: 12px 25px;
+    /* 设置按钮内边距 */
     font-size: 1.1em;
+    /* 设置按钮字体大小 */
     border-radius: 25px;
+    /* 设置按钮圆角 */
     cursor: pointer;
+    /* 设置鼠标指针为手型 */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    /* 设置背景颜色和变换的过渡效果 */
 }
 
 button:hover {
     background-color: #5e74e4;
+    /* 鼠标悬停时改变按钮背景颜色 */
     transform: scale(1.05);
+    /* 鼠标悬停时放大按钮 */
 }
-
-
 
 /* 购物车页面 */
 #cart-container {
     padding: 30px;
+    /* 设置容器内边距 */
     max-width: 1000px;
+    /* 设置容器最大宽度 */
     margin: 0 auto;
+    /* 设置容器居中 */
     display: flex;
+    /* 使用 Flexbox 布局 */
     flex-direction: column;
+    /* 设置子元素垂直排列 */
     gap: 20px;
+    /* 设置子元素之间的间距 */
 }
 
 .cart-item {
     background-color: #fff;
+    /* 设置购物车项背景颜色 */
     padding: 20px;
+    /* 设置购物车项内边距 */
     border-radius: 15px;
+    /* 设置购物车项圆角 */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* 设置购物车项阴影效果 */
     display: flex;
+    /* 使用 Flexbox 布局 */
     justify-content: space-between;
+    /* 设置子元素在主轴（水平轴）上两端对齐 */
     align-items: center;
+    /* 设置子元素在交叉轴（垂直轴）上居中对齐 */
     font-size: 1.1em;
+    /* 设置字体大小 */
 }
 
 .cart-item button {
     background-color: #ff4d4d;
+    /* 设置按钮背景颜色 */
     padding: 10px 20px;
+    /* 设置按钮内边距 */
     border-radius: 15px;
+    /* 设置按钮圆角 */
     color: white;
+    /* 设置按钮文字颜色 */
     border: none;
+    /* 移除按钮边框 */
     cursor: pointer;
+    /* 设置鼠标指针为手型 */
     font-size: 1.1em;
+    /* 设置按钮字体大小 */
     transition: background-color 0.3s ease;
+    /* 设置背景颜色的过渡效果 */
 }
 
 .cart-item button:hover {
     background-color: #e43e3e;
+    /* 鼠标悬停时改变按钮背景颜色 */
 }
 
 #total-price {
     font-size: 1.6em;
+    /* 设置总价字体大小 */
     font-weight: 700;
+    /* 设置总价字体粗细 */
     text-align: center;
+    /* 设置总价文本居中对齐 */
     color: #444;
-    margin-top: 20px;
+    /* 设置总价文本颜色 */
+    /* margin-top: 20px; */
+    /* 设置顶部外边距为200像素 */
+    margin-top: 200px;
+
 }
 
 footer {
     background-color: #fafafa;
+    /* 设置页脚背景颜色 */
+    padding: 20px 0;
+    /* 设置页脚上下内边距为20像素，左右为0 */
     text-align: center;
-    padding: 20px;
-    font-size: 1.2em;
-    margin-top: 300px;
-    color: #666;
+    /* 设置页脚文本居中对齐 */
+    /* border-top: 5px solid #d1d1d1; */
+    /* 设置顶部边框为5像素实线，颜色为浅灰色 */
+    font-size: 0.9em;
+    /* 设置页脚字体大小 */
+    color: #777;
+    /* 设置页脚文本颜色 */
+
+
 }
 
-footer button {
-    background-color: #6a82fb;
-    padding: 15px 35px;
-    font-size: 1.3em;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-footer button:hover {
-    background-color: #5e74e4;
-    transform: scale(1.05);
-}
-
-/* 订单页面 */
-#order-details {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.order-item {
-    padding: 15px;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-#order-total {
-    font-size: 1.6em;
-    font-weight: 700;
+footer p {
     text-align: center;
-    color: #444;
-    padding-top: 20px;
+    /* 设置文本居中对齐 */
+    margin-top: 200px;
+
 }
 
+/* 页脚按钮样式 */
 footer button {
     background-color: #28a745;
+    /* 按钮背景色设置为绿色 */
     padding: 15px 35px;
+    /* 设置按钮的内边距，上下 15px，左右 35px */
     font-size: 1.3em;
+    /* 设置按钮文本的字体大小 */
     border-radius: 25px;
+    /* 设置按钮圆角，形成圆形边角 */
     cursor: pointer;
+    /* 鼠标悬停时显示为手型光标 */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    /* 设置按钮状态变化的过渡效果 */
 }
 
+/* 页脚按钮悬停效果 */
 footer button:hover {
     background-color: #218838;
+    /* 鼠标悬停时按钮背景色变为更深的绿色 */
     transform: scale(1.05);
+    /* 鼠标悬停时按钮略微放大（缩放 1.05倍） */
+}
+
+/* 订单页面样式 */
+
+/* 订单详情容器 */
+#order-details {
+    max-width: 1000px;
+    /* 限制订单详情最大宽度为 1000px */
+    margin: 30px auto;
+    /* 上下间距 30px，左右自动居中 */
+    padding: 20px;
+    /* 内边距设置为 20px */
+    background-color: #fff;
+    /* 背景色为白色 */
+    border-radius: 15px;
+    /* 设置圆角，圆角半径为 15px */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* 添加阴影效果，使其浮动 */
+}
+
+/* 订单项样式 */
+.order-item {
+    padding: 15px;
+    /* 每个订单项的内边距设置为 15px */
+    margin-bottom: 15px;
+    /* 每个订单项的底部外边距为 15px */
+    font-size: 1.1em;
+    /* 字体大小设置为 1.1em */
+    background-color: #f9f9f9;
+    /* 背景色为浅灰色 */
+    border-radius: 12px;
+    /* 设置圆角，圆角半径为 12px */
+    display: flex;
+    /* 使用 Flexbox 布局 */
+    justify-content: space-between;
+    /* 在主轴上将内容分散对齐 */
+    align-items: center;
+    /* 在交叉轴上将内容居中对齐 */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    /* 添加阴影效果 */
+}
+
+/* 订单总价样式 */
+#order-total {
+    font-size: 1.6em;
+    /* 字体大小设置为 1.6em */
+    font-weight: 700;
+    /* 设置为加粗 */
+    text-align: center;
+    /* 文字居中 */
+    color: #444;
+    /* 字体颜色为深灰色 */
+    padding-top: 20px;
+    /* 上边距为 20px */
+    margin-top: 200px;
 }
 
 /* 响应式布局 */
 @media (max-width: 768px) {
+    /* 当屏幕宽度小于 768px 时，进行布局调整 */
+
     #product-container {
         flex-direction: column;
+        /* 商品列表展示改为垂直方向排列 */
         align-items: center;
+        /* 商品列表容器内的商品项居中对齐 */
     }
 
     .product {
         width: 80%;
+        /* 商品项宽度调整为原宽度的 80% */
     }
 
     #cart-container {
         padding: 20px;
+        /* 购物车容器内边距调整为 20px */
     }
 
     .cart-item {
         flex-direction: column;
+        /* 购物车项的布局改为垂直排列 */
         align-items: flex-start;
+        /* 购物车项内容左对齐 */
     }
 
     footer {
         font-size: 1em;
+        /* 页脚字体大小调整为 1em */
     }
 
     footer button {
         width: 100%;
+        /* 页脚按钮宽度调整为 100% */
     }
 }
 
-
-/* 分类按钮 */
+/* 分类按钮样式 */
 #category-container {
     display: flex;
+    /* 使用 Flexbox 布局 */
     justify-content: center;
+    /* 分类按钮水平居中对齐 */
     gap: 15px;
+    /* 设置分类按钮之间的间距为 15px */
     padding: 20px 0;
+    /* 上下内边距为 20px */
 }
 
+/* 分类按钮样式 */
 #category-container button {
     background-color: #f4f4f9;
+    /* 设置按钮的背景色为淡灰色 */
     color: #333;
+    /* 设置字体颜色为深灰色 */
     border: 1px solid #ddd;
+    /* 设置按钮边框为浅灰色 */
     padding: 10px 20px;
+    /* 设置按钮内边距，上下 10px，左右 20px */
     font-size: 1.1em;
+    /* 设置按钮字体大小为 1.1em */
     border-radius: 30px;
+    /* 设置按钮圆角，圆角半径为 30px */
     cursor: pointer;
+    /* 鼠标悬停时显示为手型光标 */
     transition: background-color 0.3s ease, transform 0.2s ease;
+    /* 设置按钮状态变化的过渡效果 */
 }
 
+/* 分类按钮悬停效果 */
 #category-container button:hover {
     background-color: #6a82fb;
+    /* 鼠标悬停时按钮背景色变为蓝色 */
     color: white;
+    /* 鼠标悬停时按钮字体颜色变为白色 */
     transform: scale(1.05);
+    /* 鼠标悬停时按钮略微放大（缩放 1.05倍） */
 }
