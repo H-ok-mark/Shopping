@@ -1,12 +1,12 @@
 // 商品数据（已更新）
 const products = [
-    { id: 1, name: "巧克力", price: 20, img: "../image/product1.png", category: "零食" },
-    { id: 2, name: "薯片", price: 15, img: "../image/product2.png", category: "零食" },
-    { id: 3, name: "饼干", price: 10, img: "../image/product3.png", category: "零食" },
-    { id: 4, name: "坚果", price: 30, img: "../image/product1.png", category: "零食" },
-    { id: 6, name: "PC游戏", price: 100, img: "../image/product3.png", category: "游戏" },
-    { id: 7, name: "汽水", price: 8, img: "../image/product1.png", category: "饮料" },
-    { id: 8, name: "果汁", price: 12, img: "../image/product2.png", category: "饮料" }
+    { id: 1, name: "巧克力", price: 49, img: "../image/巧克力.png", category: "零食" },
+    { id: 2, name: "薯片", price: 12, img: "../image/薯片.png", category: "零食" },
+    { id: 3, name: "燕麦曲奇", price: 6, img: "../image/饼干.png", category: "零食" },
+    { id: 4, name: "椰子水", price: 7, img: "../image/椰子水.png", category: "饮料" },
+    { id: 5, name: "什锦软糖", price: 10, img: "../image/什锦软糖.png", category: "糖果" },
+    { id: 6, name: "蛋糕卷", price: 25, img: "../image/蛋糕卷.png", category: "面包" },
+    { id: 7, name: "苹果汁", price: 15, img: "../image/苹果汁.png", category: "饮料" }
 ];
 
 // 获取商品展示容器
