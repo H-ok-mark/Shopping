@@ -15,30 +15,31 @@ const productContainer = document.getElementById("product-container");
 function renderProducts(filteredProducts) {
     productContainer.innerHTML = ''; // 清空当前商品展示区
     filteredProducts.forEach(product => {
-        const productElement = document.createElement("div");
-        productElement.classList.add("product");
+        const productElement = document.createElement("div"); // 创建一个 div 元素来展示商品
+        productElement.classList.add("product"); // 为商品元素添加类名
         productElement.innerHTML = `
-            <img src="${product.img}" alt="${product.name}">
+            <img src="${product.img}" alt="${product.name}"> 
             <h3>${product.name}</h3>
             <p>价格: ¥${product.price}</p>
             <button onclick="addToCart(${product.id}, '${product.name}', ${product.price})">加入购物车</button>
-        `;
-        productContainer.appendChild(productElement);
+        `; // 设置商品的图片、名称、价格和加入购物车按钮
+        productContainer.appendChild(productElement); // 将商品元素添加到商品展示容器中
     });
 }
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+// 从本地存储中获取购物车数据，如果没有则初始化为空数组
 
 function addToCart(id, name, price) {
-    const itemIndex = cart.findIndex(item => item.id === id);
+    const itemIndex = cart.findIndex(item => item.id === id); // 查找购物车中是否已有该商品
     if (itemIndex > -1) {
-        cart[itemIndex].quantity++;
+        cart[itemIndex].quantity++; // 如果已有该商品，增加其数量
     } else {
-        cart.push({ id, name, price, quantity: 1 });
+        cart.push({ id, name, price, quantity: 1 }); // 如果没有该商品，添加到购物车
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${name} 已加入购物车`);
+    localStorage.setItem("cart", JSON.stringify(cart)); // 更新本地存储中的购物车数据
+    alert(`${name} 已加入购物车`); // 提示用户商品已加入购物车
 }
 
 function filterProducts(category) {
@@ -46,6 +47,7 @@ function filterProducts(category) {
         renderProducts(products); // 渲染所有商品
     } else {
         const filteredProducts = products.filter(product => product.category === category);
+        // 根据类别筛选商品
         renderProducts(filteredProducts); // 渲染筛选后的商品
     }
 }

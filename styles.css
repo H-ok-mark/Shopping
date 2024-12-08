@@ -1,4 +1,5 @@
 /* 通用样式 */
+/* 通配符选择器 */
 * {
     margin: 0;
     /* 移除所有元素的默认外边距 */
@@ -10,6 +11,7 @@
     /* 设置全局字体 */
 }
 
+/* 类选择器 */
 body {
     background: #fafafa;
     /* 设置背景颜色为浅灰色 */
@@ -35,6 +37,7 @@ header {
     /* 设置底部边框为5像素实线，颜色为浅灰色 */
 }
 
+/* 后代选择器 */
 header h1 {
     color: white;
     /* 设置标题颜色为白色 */
@@ -46,7 +49,7 @@ header h1 {
     /* 设置底部外边距为20像素 */
 }
 
-
+/* id选择器 */
 /* 商品列表展示容器样式 */
 #product-container {
     display: flex;
@@ -83,6 +86,11 @@ header h1 {
     /* 隐藏溢出内容 */
 }
 
+/* 伪类选择器 
+hover： 选择鼠标悬停时的元素。
+active： 选择用户点击时的元素。
+focus：选择获得焦点的元素。
+*/
 .product:hover {
     transform: translateY(-5px);
     /* 鼠标悬停时向上移动5像素 */
@@ -402,29 +410,43 @@ footer button:hover {
 /* 背景视频部分 */
 #promo-video {
     position: relative;
+    /* 设置相对定位 */
     text-align: center;
+    /* 设置文本居中对齐 */
     width: 100%;
+    /* 设置宽度为100% */
     height: 50vh;
-    /* 使视频占满整个视口 */
+    /* 设置高度为视口高度的50% */
     overflow: hidden;
     /* 超出部分隐藏起来 */
     background-color: #000;
+    /* 设置背景颜色为黑色 */
 }
 
 .video-container {
     position: absolute;
+    /* 设置绝对定位 */
     top: 0;
+    /* 设置顶部位置为0 */
     left: 0;
+    /* 设置左侧位置为0 */
     width: 100%;
+    /* 设置宽度为100% */
     height: 100%;
+    /* 设置高度为100% */
 }
 
 video {
     position: absolute;
+    /* 设置绝对定位 */
     top: 0;
+    /* 设置顶部位置为0 */
     left: 0;
+    /* 设置左侧位置为0 */
     width: 100%;
+    /* 设置宽度为100% */
     height: 100%;
+    /* 设置高度为100% */
     object-fit: cover;
     /* 让视频填充整个容器 */
     z-index: 1;
@@ -434,24 +456,37 @@ video {
 /* 视频描述文本样式 */
 .video-description {
     position: absolute;
+    /* 设置绝对定位 */
     top: 50%;
+    /* 设置顶部位置为50% */
     left: 50%;
+    /* 设置左侧位置为50% */
     transform: translate(-50%, -50%);
+    /* 通过平移使元素居中 */
     color: white;
+    /* 设置文本颜色为白色 */
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    /* 设置文本阴影 */
     text-align: center;
+    /* 设置文本居中对齐 */
     z-index: 1;
+    /* 保证文本在视频的前面 */
 }
 
 .video-description h2 {
     font-size: 2.5em;
+    /* 设置标题字体大小为2.5倍默认大小 */
     font-weight: bold;
+    /* 设置标题字体加粗 */
     margin-bottom: 10px;
+    /* 设置底部外边距为10像素 */
 }
 
 .video-description p {
     font-size: 1.2em;
+    /* 设置段落字体大小为1.2倍默认大小 */
     line-height: 1.5;
+    /* 设置行高为1.5倍字体大小 */
 }
 
 /* 悬浮按钮样式 */
@@ -486,6 +521,12 @@ video {
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
 }
+
+/* 伪类选择器 
+hover： 选择鼠标悬停时的元素。
+active： 选择用户点击时的元素。
+focus：选择获得焦点的元素。
+*/
 
 .floating-btn:hover {
     background: linear-gradient(135deg, #5e74e4, #f45c9d);
