@@ -1,3 +1,4 @@
+// 将一个有效的 JSON 字符串解析为 JavaScript 对象
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 // 从本地存储中获取购物车数据，如果没有则初始化为空数组
 
@@ -30,6 +31,7 @@ function removeFromCart(id) {
             // 如果商品数量为 1，删除该商品
             cart.splice(itemIndex, 1);
         }
+        // 将  JSON对象转换为JavaScript  字符串
         localStorage.setItem("cart", JSON.stringify(cart)); // 更新本地存储中的购物车数据
         updateCart(); // 更新购物车显示
     }
@@ -40,6 +42,7 @@ function goToCheckout() {
         alert("购物车为空，无法结算!"); // 如果购物车为空，提示用户
         return;
     }
+    // 将  JSON对象转换为JavaScript  字符串
     sessionStorage.setItem("order", JSON.stringify(cart)); // 将购物车数据保存到会话存储
     localStorage.removeItem("cart"); // 清空本地存储中的购物车数据
     window.location.href = "../html/order.html"; // 跳转到订单页面

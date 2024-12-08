@@ -26,18 +26,19 @@ function renderProducts(filteredProducts) {
         productContainer.appendChild(productElement); // 将商品元素添加到商品展示容器中
     });
 }
-
+// 将一个有效的 JSON 字符串解析为 JavaScript 对象
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 // 从本地存储中获取购物车数据，如果没有则初始化为空数组
 
 function addToCart(id, name, price) {
     const itemIndex = cart.findIndex(item => item.id === id); // 查找购物车中是否已有该商品
+    // findIndex() 返回的是一个 整数索引值，从0开始
     if (itemIndex > -1) {
         cart[itemIndex].quantity++; // 如果已有该商品，增加其数量
     } else {
         cart.push({ id, name, price, quantity: 1 }); // 如果没有该商品，添加到购物车
     }
-
+    // 将 JavaScript 对象转换为 JSON 字符串
     localStorage.setItem("cart", JSON.stringify(cart)); // 更新本地存储中的购物车数据
     alert(`${name} 已加入购物车`); // 提示用户商品已加入购物车
 }
