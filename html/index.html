@@ -6,18 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品浏览</title>
     <link rel="stylesheet" href="../styles.css">
-
 </head>
 
 <body>
     <header>
-        <h1>商品浏览</h1>
-        <nav>
-            <a href="cart.html" class="nav-link">购物车</a>
-            <a href="order.html" class="nav-link">订单查看</a>
-        </nav>
+        <h1>零食购物商城</h1>
     </header>
 
+    <section id="promo-video">
+        <div class="video-container">
+            <!-- 背景视频播放器 -->
+            <video id="promo" autoplay loop muted>
+                <!-- autoplay: 自动播放
+                    loop: 循环播放
+                    muted: 静音 -->
+                <source src="../video/宣传片.mp4" type="video/mp4">
+                <source src="../video/宣传片.webm" type="video/webm">
+                <source src="../video/宣传片.ogg" type="video/ogg">
+                <!-- 如果浏览器不支持 video 标签，显示以下内容 -->
+                您的浏览器不支持 HTML5 视频播放。
+            </video>
+            <!-- 视频描述文本 -->
+            <div class="video-description">
+                <h2>欢迎观看我们的精彩宣传片！</h2>
+                <p>了解我们最新的商品和优惠活动，让购物体验更加轻松愉快！</p>
+            </div>
+        </div>
+    </section>
     <!-- 商品分类导航栏 -->
     <div id="category-container" class="category-container">
         <button onclick="filterProducts('所有')">所有</button>
@@ -31,12 +46,18 @@
     <section id="product-container" class="product-container">
         <!-- 动态生成商品列表 -->
     </section>
+    <!-- 悬浮按钮 -->
+    <div id="floating-buttons">
+        <a href="cart.html" class="floating-btn">购物车</a>
+        <a href="order.html" class="floating-btn">订单查看</a>
+    </div>
 
     <footer>
         <p>© 2024 web前端开发大作业</p>
     </footer>
 
-    <script src="../js/product.js"></script>
+    <script src="../js/product.js">
+    </script>
 </body>
 
 </html>
