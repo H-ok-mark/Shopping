@@ -20,6 +20,10 @@ function renderOrder() {
 }
 
 function submitOrder() {
+    if (order.length === 0) {
+        alert("订单为空，无法提交!");
+        return;
+    }
     alert("订单已提交！");
     sessionStorage.removeItem("order");
     window.location.href = "../html/index.html";
